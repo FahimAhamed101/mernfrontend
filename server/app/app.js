@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
 import dbConnect from "../config/dbConnect.js";
-
-
+import userRoutes from "../routes/usersRoute.js";
+import categoriesRouter from "../routes/categoriesRouter.js";
 
 dotenv.config();
 //db connect
@@ -21,5 +21,6 @@ app.use((err,req,res,next)=>{
 app.get('/',(req,res)=>{
     res.send("hello")
 });
-
+app.use("/api/v1/users/", userRoutes);
+app.use("/api/v1/categories/", categoriesRouter);
 export default app;

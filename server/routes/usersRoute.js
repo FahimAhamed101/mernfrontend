@@ -3,7 +3,7 @@ import {
   registerUserCtrl,
   loginUserCtrl,
 
-} from "./usersCtrl.js";
+} from "../controllers/usersCtrl.js";
 
 
 const userRoutes = exppress.Router();

@@ -7,6 +7,8 @@ import categoriesRouter from "../routes/categoriesRouter.js";
 import productsRouter from "../routes/productsRoute.js";
 import colorRouter from "../routes/colorRouter.js";
 import brandsRouter from "../routes/brandsRouter.js";
+import Order from "../model/Order.js";
+import couponsRouter from "../routes/couponsRouter.js";
 dotenv.config();
 //db connect
 dbConnect();
@@ -28,4 +30,7 @@ app.use("/api/v1/products/", productsRouter);
 app.use("/api/v1/categories/", categoriesRouter);
 app.use("/api/v1/brands/", brandsRouter);
 app.use("/api/v1/colors/", colorRouter);
+app.use("/api/v1/orders/", orderRouter);
+app.use("/api/v1/coupons/", couponsRouter);
+
 export default app;

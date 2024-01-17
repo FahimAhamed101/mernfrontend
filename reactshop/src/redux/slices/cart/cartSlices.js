@@ -1,4 +1,4 @@
-const { createAsyncThunk, createSlice } = require("@reduxjs/toolkit");
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 //initalsState
 const initialState = {
@@ -26,6 +26,8 @@ export const addOrderToCartaction = createAsyncThunk(
 export const getCartItemsFromLocalStorageAction = createAsyncThunk(
   "cart/get-order-items",
   async () => {
+    
+    
     const cartItems = localStorage.getItem("cartItems")
       ? JSON.parse(localStorage.getItem("cartItems"))
       : [];

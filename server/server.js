@@ -1,9 +1,7 @@
 import http from "http";
 import app from "./app/app.js";
 
-
-const port = process.env.PORT || 5000
+//create the server
+const PORT = process.env.PORT || 2030;
 const server = http.createServer(app);
-app.listen(port,()=>{
-    console.log(`server is runing at http://localhost:${port}`);
-})
+server.listen(PORT, console.log(`Server is up and running on port ${PORT}`));

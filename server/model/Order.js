@@ -13,7 +13,7 @@ const OrderSchema = new Schema(
     orderItems: [
       {
         type: Object,
-        required: true,
+      
       },
     ],
     shippingAddress: {

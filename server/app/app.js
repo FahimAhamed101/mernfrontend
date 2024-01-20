@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import cors from "cors";
 import Stripe from "stripe";
-dotenv.config();
+
 import express from "express";
 import path from "path";
 import dbConnect from "../config/dbConnect.js";
@@ -15,7 +15,7 @@ import reviewRouter from "../routes/reviewRouter.js";
 import userRoutes from "../routes/usersRoute.js";
 import Order from "../model/Order.js";
 import couponsRouter from "../routes/couponsRouter.js";
-
+dotenv.config();
 //db connect
 dbConnect();
 const app = express();

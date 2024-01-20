@@ -22,7 +22,16 @@ const app = express();
 //cors
 
 
-app.use(cors(app)); 
+const options = [
+  cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
+
+app.use(options);
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);

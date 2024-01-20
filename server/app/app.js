@@ -21,7 +21,7 @@ dbConnect();
 const app = express();
 //cors
 const corsOptions = {
-  origin: 'mernfrontend-hahx7o56f-fahimahamed101.vercel.app',
+  origin: 'https://mernfrontend-sigma.vercel.appl.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,

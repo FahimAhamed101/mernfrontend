@@ -13,7 +13,7 @@ const ProductSchema = new Schema(
       required: true,
     },
     brand: {
-      type: String,
+      type: String, 
       required: true,
     },
     category: {

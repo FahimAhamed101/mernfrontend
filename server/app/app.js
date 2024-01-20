@@ -20,7 +20,10 @@ import couponsRouter from "../routes/couponsRouter.js";
 dbConnect();
 const app = express();
 //cors
-app.use(cors());
+app.use(cors({
+  credentials: true,
+  origin: process.env.CLIENT_URL,
+}));
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);

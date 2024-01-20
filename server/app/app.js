@@ -30,7 +30,9 @@ const options = [
     credentials: true,
   })
 ];
-
+app.prependListener("request", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+});
 app.use(options);
 //Stripe webhook
 //stripe instance

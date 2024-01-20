@@ -1,8 +1,8 @@
+
+import logo from '../../logo.svg';
 import { Link } from "react-router-dom";
 import HomeCategories from "./HomeCategories";
 import HomeProductTrending from "./HomeProductTrending";
-import logo from '../../logo.svg';
-
 
 const offers = [
   {
@@ -214,4 +214,3 @@ export default function Example() {
     </div>
   );
 }
-

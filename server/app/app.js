@@ -22,7 +22,7 @@ const app = express();
 //cors
 
 
-app.use(cors()); 
+app.use(cors(app)); 
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);

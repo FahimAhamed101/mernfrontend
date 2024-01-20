@@ -24,7 +24,7 @@ const app = express();
 
 const options = [
   cors({
-    origin: 'https://mernfrontendapi.vercel.app',
+    origin: 'https://mernfrontendapi.vercel.app/',
     methods: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,

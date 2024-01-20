@@ -22,7 +22,7 @@ const app = express();
 //cors
 app.use(cors({
   credentials: true,
-  origin: [process.env.CLIENT_URL],
+  origin: ["https://mernfrontend-sigma.vercel.app/"],
 }));
 //Stripe webhook
 //stripe instance

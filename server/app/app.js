@@ -20,14 +20,9 @@ dotenv.config();
 dbConnect();
 const app = express();
 //cors
-const corsOptions = {
-  origin: 'https://reactshop-pi.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
 
-app.use(cors(corsOptions)); 
+
+app.use(cors()); 
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);

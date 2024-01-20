@@ -20,11 +20,14 @@ dotenv.config();
 dbConnect();
 const app = express();
 //cors
-app.use(cors({
+const corsOptions = {
+  origin: 'https://mernfrontend-sigma.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-  origin: ["https://mernfrontend-sigma.vercel.app"],
-  methods:["POST","GET"],
-}));
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions)); 
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);

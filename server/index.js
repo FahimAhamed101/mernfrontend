@@ -1,5 +1,5 @@
 import http from "http";
-import app from "./app/app.js";
+import app from "./api/app.js";
 
 //create the server
 const PORT = process.env.PORT || 2030;

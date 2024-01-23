@@ -1,0 +1,10 @@
+{
+    "buildCommand": "cd reactshop && npm install && npm run build",
+    "outputDirectory": "reactshop/dist",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "server.js"
+        }
+    ]
+}

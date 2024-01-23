@@ -1,7 +1,5 @@
 {
-    "buildCommand": "cd reactshop && npm install && npm run build",
-    "outputDirectory": "reactshop/dist",
-    "framework": "vite",
+   
     "rewrites": [
         {
             "source": "/(.*)",

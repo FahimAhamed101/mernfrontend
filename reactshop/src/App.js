@@ -36,14 +36,16 @@ import ProductUpdate from "./components/Admin/Products/ProuductUpdate";
 import UpdateOrders from "./components/Admin/Orders/UpdateOrders";
 import ColorsList from "./components/Admin/Categories/ColorsList";
 import { useDispatch, useSelector } from "react-redux";
-
+import Shop from "./components/Shop";
+import "react-multi-carousel/lib/styles.css";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-
+   
       {/* hide navbar if admin */}
-      <Routes>
+      <Routes>   <Route path="/shop" element={<Shop />}></Route>
         {/* admin route */}
         <Route
           path="admin"
@@ -86,6 +88,7 @@ const App = () => {
               </AdminRoutes>
             }
           />
+
           {/* coupons */}
           <Route
             path="add-coupon"
@@ -208,6 +211,7 @@ const App = () => {
           }
         ></Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };

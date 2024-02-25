@@ -105,6 +105,7 @@ export default function Navbar() {
                       </a>
                     </div>
                   ))} */}
+                
                   {categoriesToDisplay?.length <= 0 ? (
                     <>
                       <Link
@@ -132,6 +133,7 @@ export default function Navbar() {
                     categoriesToDisplay?.map((category) => {
                       return (
                         <>
+                       
                           <Link
                             key={category?._id}
                             to={`/products-filters?category=${category?.name}`}
@@ -226,6 +228,12 @@ export default function Navbar() {
                   </div>
 
                   <div className="hidden h-full lg:flex">
+                  <Link
+                        to="/shop"
+                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      >
+                        Shop
+                      </Link>
                     {/*  menus links*/}
                     <Popover.Group className="ml-8">
                       <div className="flex h-full justify-center space-x-8">
@@ -256,6 +264,7 @@ export default function Navbar() {
                           categoriesToDisplay?.map((category) => {
                             return (
                               <>
+                       
                                 <Link
                                   key={category?._id}
                                   to={`/products-filters?category=${category?.name}`}

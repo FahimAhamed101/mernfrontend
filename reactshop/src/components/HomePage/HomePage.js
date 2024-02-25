@@ -1,9 +1,30 @@
 
 import logo from '../../logo.svg';
+import slide1 from '../../slide1.jpg';
+import slide2 from '../../slide2.jpg';
 import { Link } from "react-router-dom";
 import HomeCategories from "./HomeCategories";
 import HomeProductTrending from "./HomeProductTrending";
-
+import Carousel from "react-multi-carousel";
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 const offers = [
   {
     name: "Download the app",
@@ -57,7 +78,40 @@ export default function Example() {
     <div className="bg-white">
       <main>
         {/* Hero */}
+        <Carousel  swipeable={false}
+  draggable={false}
+  showDots={true}
+  responsive={responsive}
+  ssr={true} // means to render carousel on server-side.
+  infinite={true}
+  autoPlay={true}
+  autoPlaySpeed={2000}
+  keyBoardControl={true}
+ 
+ 
+  containerClass="carousel-container"
+  
+
+  dotListClass="custom-dot-list-style"
+  itemClass="carousel-item-padding-40-px"   >
+  <div>  <img
+                        className="-my-1 mx-auto h-24 w-full h-full"
+                        src={slide1}
+                        alt=""
+                      /></div>
+  <div> <img
+                        className="-my-1 mx-auto h-24 w-full h-full"
+                        src={slide2}
+                        alt=""
+                      /></div>
+  <div>  <img
+                        className="-my-1 mx-auto h-24 w-full h-full"
+                        src={slide1}
+                        alt=""
+                      /></div>
+</Carousel>;
         <div className="flex flex-col border-b border-gray-200 lg:border-0">
+    
           <nav aria-label="Offers" className="order-last lg:order-first">
             <div className="mx-auto max-w-7xl lg:px-8">
               <ul
